@@ -37,11 +37,8 @@ class PolyTreeNode
   def value
     @value
   end
-  # def inspect
-  #   [@value, @children]
-  # end
+
   def dfs(target_value)
-    debugger
     return self if self.value == target_value
     self.children.map do |child|
       result = child.dfs(target_value)
